@@ -11,7 +11,7 @@ The files with `.js`/`.css` must be created as `HTML` files in AppScript.</b><br
 You must also rename the first worksheet to `Settings` and add a new one named `_data_`.<br>
 <b>Inside the `Settings` worksheet you must have the exact parameters shown in the screenshot below. (<i>Of course you can change them based on your assets/timeframe and so on</i>)</b><br>
 <p align="center">
-    <img alt="Official Logo" src="/resources/parameters.png" width="330" /><br/>
+    <img alt="Official Logo" src="/resources/parameters.png" width="850" /><br/>
 </p>
 <br>
 
