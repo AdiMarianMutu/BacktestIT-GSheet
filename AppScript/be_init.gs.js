@@ -1,7 +1,7 @@
 const app = new App();
 const backend = new Backend();
 const env = {
-  github_repo_issues_url: 'https://github.com/AdiMarianMutu/BacktestPortfolio/issues',
+  github_repo_issues_url: 'https://github.com/AdiMarianMutu/BacktestIT-GSheet/issues',
   my_linkedin_url: 'https://www.linkedin.com/in/mutu-adi-marian/'
 };
 
