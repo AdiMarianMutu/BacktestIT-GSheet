@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_blank">
+
+    {{main.css}}
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    {{main.js}}
+  </head>
+  <body style="overflow: hidden;">
+    <div id="loader" class="loader-container">
+      <div class="loader"></div>
+      <b>Loading data, please wait...</b>
+      <div class="credits">
+        <div>
+          <span> Made with </span>
+          <div>
+            <img class="credits-love-img" src="https://openmoji.org/data/color/svg/2764.svg"/>
+          </div>
+          <span> by </span>
+          <a target="_blank" href="<?my_linkedin_url?>" style="color: #ff9292;">Adi-Marian Mutu</a>
+        </div>
+        <span style="font-size: .8rem;"><i>Powered by Google Finance &<a target="_blank" href="https://www.chartjs.org/" style="color: white">ChartJS</a></i></span>
+      </div>
+    </div>
+
+    <div id="error-msg">
+      <header>
+        <h1></h1>
+        <h2></h2>
+      </header>
+      <div class="stack-error">
+        <div class="container">
+          <p id="stack-name"></p>
+          <p id="stack-message"></p>
+          <p id="stack-e"></p>
+        </div>
+        <div class="container user-settings-container">
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    {{content.html}}
+  </body>
+</html>
