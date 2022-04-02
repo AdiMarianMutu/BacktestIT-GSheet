@@ -1,6 +1,4 @@
-# Backtest-IT (Using Google Sheet)
-
-### Useful to backtest a stock/crypto portfolio
+# Backtest-IT (Using Google Sheet) - Useful to backtest a stock/crypto portfolio
 
 ## Instructions
 Create a new Google Spreadsheet file, add all the files from the `src` folder to the `AppScript` console (`Extensions > AppScript`).<br>
@@ -15,4 +13,6 @@ You must also rename the first worksheet to `Settings` and add a new one named `
 </p>
 <br>
 
-### You can use any ticker available from Google
+<b>
+- You can use any ticker available from Google.<br>
+- When using an asset which is not available in your local currency, the script will automatically convert the foreign asset price to the local currency at the moment in time when the transaction would have been bought.</b>
