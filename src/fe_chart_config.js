@@ -39,7 +39,7 @@
                   profitPercentageDifference = `${profitPercentageDifference < 0 ? `${profitPercentageDifference}` : `+${profitPercentageDifference}`}`;
                 }
 
-                return [`${lbl}: ${item.data[index]}${isPortfolioOrBenchmark && profitPercentageDifference != 0 ? ` (${profitPercentageDifference}%)` : ''}`];
+                return [`${lbl}: ${this.h.asset.numberToFixed(item.data[index], 1)}${isPortfolioOrBenchmark && profitPercentageDifference != 0 ? ` (${profitPercentageDifference}%)` : ''}`];
               },
             }
           },
