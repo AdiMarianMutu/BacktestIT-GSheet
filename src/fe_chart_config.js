@@ -19,7 +19,30 @@
                 size: 12
               }
             }
-          }
+          },
+          tooltip: {
+            displayColors: true,
+            backgroundColor: 'rgb(32, 32, 32)',
+            callbacks: {
+              label: (tooltipItem) => {
+                const item = tooltipItem.dataset;
+                const lbl = item.label;
+                const index = tooltipItem.dataIndex;
+
+                const isPortfolioOrBenchmark = lbl === 'Portfolio' || lbl === 'Benchmark';
+                // Using var for hoisting
+                if (isPortfolioOrBenchmark) {
+                  const amountInvested = this.data.datasets[0].data[index];
+                  // Calculating the percentage difference between the portfolio/benchmark relative to the amount invested
+                  var profitPercentageDifference = this.h.chart.calcPercentageDifference(item.data[index], amountInvested);
+
+                  profitPercentageDifference = `${profitPercentageDifference < 0 ? `${profitPercentageDifference}` : `+${profitPercentageDifference}`}`;
+                }
+
+                return [`${lbl}: ${item.data[index]}${isPortfolioOrBenchmark && profitPercentageDifference != 0 ? ` (${profitPercentageDifference}%)` : ''}`];
+              },
+            }
+          },
         },
         scales: {
           y: {  
