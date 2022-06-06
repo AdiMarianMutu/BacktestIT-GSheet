@@ -76,6 +76,10 @@
       this.data.datasets = this.addDatasets(datasets);
     }
 
+    calcPercentageDifference(x, y) {
+      return parseFloat((((x - y) / y) * 100)).toFixed(2);
+    }
+
     addDatasets(datasets) {
       const colors = this.getColors(datasets.length, 0.1);
       const _datasets = [];
